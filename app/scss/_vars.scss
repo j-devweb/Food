@@ -1,0 +1,21 @@
+
+$black: #1c1c1c;
+$black-title: #252B42;
+$green: #27ae60;
+$white: #fff;
+$box-shadow: 0 15px 15px rgba(0,0,0,.05);
+$font-open: "Open Sans", sans-serif;
+
+
+@mixin clamp($row) {
+  -webkit-line-clamp: $row;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@mixin grid($val) {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+gap: 30px;
+}

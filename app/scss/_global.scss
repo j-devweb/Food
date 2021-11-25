@@ -1,0 +1,110 @@
+body {
+  min-height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 27px;
+  color: $black;
+  background-color: #fff;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 38px;
+  line-height: 39px;
+  color: $black-title;
+  @include clamp(2);
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.btn {
+  padding: 5px 20px;
+  background-color: $green;
+  border-radius: 10px;
+  color: $white;
+  border: transparent;
+  font-weight: 700;
+  cursor: pointer;
+
+  &--center {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.vertical-space {
+  padding: 70px 0;
+}
+
+.filter-menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+
+  &__item + .filter-menu__item {
+    margin-left: 10px;
+  }
+
+  &__btn {
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    border-bottom: 1px solid transparent;
+    transition: 0.3s;
+    padding: 10px;
+
+    &:hover {
+      color: $green;
+      border-bottom: 1px solid $green;
+    }
+
+    &:focus {
+      color: $green;
+      border-bottom: 1px solid $green;
+    }
+  }
+}
+
+.fa-heart, .fa-user {
+  font-weight: 500;
+}
+
+.icon {
+  width: 70px;
+  height: 70px;
+}
+
+.time {
+font-size: 12px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+
+
+// Animation
+@keyframes fadeUp {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+}

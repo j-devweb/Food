@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body id="body">
+  <header class="header">
+    <div class="container">
+      <nav class="header__inner">
+        <picture>
+          <source srcset="images/logo-mini.png" media="(max-width: 768px)">
+          <source srcset="images/logo.png">
+          <img class="logo__img" srcset="images/logo.png" alt="Логотип сайта">
+        </picture>
+
+        <ul class="menu">
+          <li class="menu__item">
+            <a class="menu__link" href="#body">Главная</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#about">О нас</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#popular">Популярные товары</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#promo">Акции</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#news">Новости</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#footer">Контакты</a>
+          </li>
+        </ul>
+
+        <ul class="user-nav">
+          <li class="user-nav__item">
+            <a id="menu-btn" class="fas fa-bars">
+              <span class="sr-only">Открыть Меню</span>
+            </a>
+          </li>
+
+          <li class="user-nav__item">
+            <a id="search-btn" class="fas fa-search">
+              <span class="sr-only">Поиск по сайту</span>
+            </a>
+          </li>
+
+          <li class="user-nav__item">
+            <a id="favourites-btn" class="fas fa-heart">
+              <span class="sr-only">Открыть Избранное</span>
+            </a>
+            <span class="user-nav__num">6</span>
+          </li>
+
+          <li class="user-nav__item">
+            <a id="cart-btn" class="fas fa-shopping-cart">
+              <span class="sr-only">Открыть Корзину товаров</span>
+            </a>
+            <span class="user-nav__num">3</span>
+          </li>
+
+          <li class="user-nav__item">
+            <a id="login-btn" class="fas fa-user">
+              <span class="sr-only">Войти в личный кабинет</span>
+            </a>
+          </li>
+
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Start Form Search -->
+  <section class="search-form container">
+    <form>
+      <input class="search-form__input" id="search-box" type="search" name="search" placeholder="Введите запрос">
+      <label class="fas fa-search" for="search-box">
+        <span class="sr-only">Поиск по сайту</span>
+      </label>
+    </form>
+  </section>
+  <!-- End Form Search -->
+
+  <!-- Start favourites -->
+  <section class="favourites container">
+    <div class="favourites__inner">
+      <h3 class="favourites__title title">Избранное</h3>
+      <div class="favourites__items">
+
+        <article class="small-card small-card--center">
+          <img class="small-card__img" src="images/card/pear.png" alt="Груша">
+          <a class="fas fa-times">
+            <span class="sr-only">Закрыть карточку товара</span>
+          </a>
+          <div class="small-card__box">
+            <h3 class="small-card__title">Груша</h3>
+            <div class="small-card__status">В наличии</div>
+            <div class="price">
+              <span class="old-price">100 р</span>
+              <span class="new-price">70 р</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="small-card small-card--center">   
+          <img class="small-card__img" src="images/card/cauliflower.png" 
+          alt="Цветная капуста">
+          <a class="fas fa-times">
+            <span class="sr-only">Закрыть карточку товара</span>
+          </a>
+          <div class="small-card__box">
+            <h3 class="small-card__title">Цветная капуста</h3>
+            <div class="small-card__status">В наличии</div>
+            <div class="price">
+              <span class="old-price">100 р</span>
+              <span class="new-price">70 р</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="small-card small-card--center">
+          <img class="small-card__img" src="images/card/tomato.png" alt="Помидоры">
+          <a class="fas fa-times">
+            <span class="sr-only">Закрыть карточку товара</span>
+          </a>
+          <div class="small-card__box">
+            <h3 class="small-card__title">Помидоры</h3>
+            <div class="small-card__status">В наличии</div>
+            <div class="price">
+              <span class="old-price">100 р</span>
+              <span class="new-price">70 р</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+  <!-- End favourites -->
+
+  <!-- Start Cart -->
+  <section class="cart container">
+    <div class="cart__inner">
+      <h3 class="cart__title title">Корзина</h3>
+
+      <ul class="cart__items">
+        <li class="cart__item">
+          <article class="small-card">
+            <img class="small-card__img" src="images/card/broccoli.jpg" alt="Брокколи">
+            <a class="fas fa-times">
+              <span class="sr-only">Закрыть карточку товара</span>
+            </a>
+            <div class="small-card__box">
+              <h3 class="small-card__title">Брокколи</h3>
+              <div class="small-card__status">В наличии</div>
+              <div class="price">
+                <span class="old-price">100 р</span>
+                <span class="new-price">70 р</span>
+              </div>
+            </div>
+          </article>
+        </li>
+      </ul>
+
+      <div class="cart__total">
+        <h3 class="cart__total-title">Товаров на сумму:</h3>
+        <span class="cart__total-price">3000 рублей</span>
+        <button class="cart__btn btn">Оформить заказ</button>
+      </div>
+    </div>
+  </section>
+  <!-- End Cart -->
+
+  <!-- Start Cart -->
+  <section class="login-form container">
+    <form action="">
+      <h3 class="login-form__title">Войти</h3>
+      <input class="login-form__input" type="email" name="email" placeholder="Введите вашу почту">
+      <input class="login-form__input" type="password" name="password" placeholder="Введите ваш пароль">
+
+      <div class="login-form__remember">
+        <input type="checkbox" name="remember" id="remember-me">
+        <label for="remember-me">Запомнить меня</label>
+      </div>
+
+      <input class="btn" type="submit" value="Войти">
+      <p>Забыли пароль? <a class="login-form__link" href="#"> Нажмите сюда</a></p>
+      <p>У вас нет аккаунта? <a class="login-form__link" href="#"> Регистрация</a></p>
+    </form>
+
+
+
+
+  </section>
+  <!-- End Cart -->
+
+  <main class="main">
+
+    <section class="top-slider">
+      <ul class="top-slider__items">
+        <li class="top-slider__item" 
+        style="background-image: url(../images/slide-1.jpg)">
+          <div class="container">
+            <a class="top-slider__link" href="#">
+              <div class="top-slider__content">
+                <h2 class="top-slider__title title">Узнайте наши лучшие цены!</h2>
+                <p class="top-slider__text">Каждый день в нашем супермаркете появляются акции на различные товары.
+                  Успейте узнать.</p>
+                <button class="btn" type="button">Акции</button>
+              </div>
+            </a>
+          </div>
+        </li>
+
+        <li class="top-slider__item" 
+        style="background-image: url(../images/slide-2.jpg)">
+          <div class="container">
+            <a class="top-slider__link" href="#">
+              <div class="top-slider__content">
+                <h2 class="top-slider__title title">Высококачественные продукты</h2>
+                <p class="top-slider__text">Мы предлагает только качественные продукты органического происхождения.
+                  Тщательно проверяем качетсво у наших поставщиков фермеров.</p>
+                <button class="btn" type="button">Перейти</button>
+              </div>
+            </a>
+          </div>
+        </li>
+
+        <li class="top-slider__item" 
+        style="background-image: url(../images/slide-3.jpg)">
+          <div class="container">
+            <a class="top-slider__link" href="#">
+              <div class="top-slider__content">
+                <h2 class="top-slider__title title">Отличные фрукты всегда!</h2>
+                <p class="top-slider__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus in
+                  consequuntur eligendi possimus ducimus culpa.</p>
+                <button class="btn" type="button">Перейти</button>
+              </div>
+            </a>
+          </div>
+        </li>
+      </ul>
+
+      <div class="support">
+        <div class="container">
+          <div class="support__inner">
+            <div class="support__item">
+              <svg class="support__icon">
+                <use xlink:href="images/sprite.svg#delivery"></use>
+              </svg>
+              <p class="support__text">Быстрая доставка по России.</p>
+            </div>
+
+            <div class="support__item">
+              <svg class="support__icon">
+                <use xlink:href="images/sprite.svg#support"></use>
+              </svg>
+              <p class="support__text">Круглосуточная поддержка клиентов</p>
+            </div>
+
+            <div class="support__item">
+              <svg class="support__icon">
+                <use xlink:href="images/sprite.svg#quality"></use>
+              </svg>
+              <p class="support__text">Только натуральная качетсвенная продукция</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="about vertical-space" id="about">
+      <div class="container">
+        <h2 class="title">О нас</h2>
+        <span class="">Продукты ORGANIC FOOD</span>
+        <p class="about__text">
+          В желании питаться правильно, разнообразно и сбалансированно многочисленные семьи предпочитают
+          органические
+          продукты.
+          Наши продукты обладают естественный вкус, не измененный добавками, ароматизаторами и консервантами.
+          Отведав большой эко-ассортимент из нашего интернет-магазина, вы обязательно полюбите здоровую продукцию.
+          Желаем приятных покупок!
+        </p>
+      </div>
+    </section>
+
+    <section class="popular vertical-space" id="popular">
+      <div class="container">
+        <h2 class="title">Популярные товары</h2>
+
+        <ul class="filter-menu">
+          <li class="filter-menu__item">
+            <button class="filter-menu__btn" type="button" data-filter="all">Все товары</button>
+          </li>
+          <li class="filter-menu__item">
+            <button class="filter-menu__btn" type="button" data-filter=".category-a">Овощи</button>
+          </li>
+          <li class="filter-menu__item">
+            <button class="filter-menu__btn" type="button" data-filter=".category-b">Фрукты</button>
+          </li>
+          <li class="filter-menu__item">
+            <button class="filter-menu__btn" type="button" data-filter=".category-c">Соки</button>
+          </li>
+        </ul>
+
+        <ul class="popular__cards">
+          <li class="popular__card mix category-a">
+            <article class="card">
+              <div class="card__badge">
+                <span class="badge" style="background-color: #27ae60">Новинка</span>
+                <span class="badge hidden" style="background-color: #f18100">Хит</span>
+                <span class="badge hidden" style="background-color: #0670c7">- 50 %</span>
+              </div>
+
+              <img class="card__img" src="images/card/broccoli.jpg" alt="Брокколи">
+              <span class="star"> 
+                <span class="sr-only">Рейтинг товара</span>
+              </span>
+
+              <div class="card__content">
+                <h3 class="card__title">Брокколи</h3>
+                <div class="small-card__status">
+                  В наличии
+                </div>
+                <div class="price">
+                  <span class="old-price">100 р</span>
+                  <span class="new-price">70 р</span>
+                </div>
+              </div>
+
+              <div class="card__link-box">
+                <a class="fas fa-search">
+                  <span class="sr-only">Поиск по сайту</span>
+                </a>
+                <a class="fas fa-shopping-cart">
+                  <span class="sr-only">Добавить товар в корзину</span>
+                </a>
+                <a class="fas fa-heart">
+                  <span class="sr-only">Добавить товар в избранное</span>
+                </a>
+              </div>
+            </article>
+          </li>
+
+          <li class="popular__card mix category-a">
+            <article class="card">
+              <div class="card__badge">
+                <span class="badge" style="background-color: #27ae60">Новинка</span>
+                <span class="badge" style="background-color: #f18100">Хит</span>
+                <span class="badge hidden" style="background-color: #0670c7">- 50 %</span>
+              </div>
+
+              <img class="card__img" src="images/card/cauliflower.png" alt="Брокколи">
+              <span class="star"> 
+                <span class="sr-only">Рейтинг товара</span>
+              </span>
+
+              <div class="card__content">
+                <h3 class="card__title">Цветная капуста</h3>
+
+                <div class="small-card__status">В наличии</div>
+                <div class="small-card__status hidden" 
+                style="color: #fc6161;">Заканчивается</div>
+                <div class="price">
+                  <span class="old-price">100 р</span>
+                  <span class="new-price">70 р</span>
+                </div>
+              </div>
+
+              <div class="card__link-box">
+                <a class="fas fa-search">
+                  <span class="sr-only">Поиск по сайту</span>
+                </a>
+                <a class="fas fa-shopping-cart">
+                  <span class="sr-only">Добавить товар в корзину</span>
+                </a>
+                <a class="fas fa-heart">
+                  <span class="sr-only">Добавить товар в избранное</span>
+                </a>
+              </div>
+            </article>
+          </li>
+
+          <li class="popular__card mix category-a">
+            <article class="card">
+              <div class="card__badge">
+                <span class="badge hidden" style="background-color: #27ae60">Новинка</span>
+                <span class="badge hidden" style="background-color: #f18100">Хит</span>
+                <span class="badge hidden" style="background-color: #0670c7">- 50 %</span>
+              </div>
+
+              <img class="card__img" src="images/card/carrot.png" alt="Морковь">
+              <span class="star"> 
+                <span class="sr-only">Рейтинг товара</span>
+              </span>
+
+              <div class="card__content">
+                <h3 class="card__title">Морковь</h3>
+
+                <div class="small-card__status hidden">В наличии</div>
+                <div class="small-card__status " 
+                style="color: #fc6161;">Заканчивается</div>
+
+                <div class="price">
+                  <span class="old-price hidden">100 р</span>
+                  <span class="new-price">70 р</span>
+                </div>
+              </div>
+
+              <div class="card__link-box">
+                <a class="fas fa-search">
+                  <span class="sr-only">Поиск по сайту</span>
+                </a>
+                <a class="fas fa-shopping-cart">
+                  <span class="sr-only">Добавить товар в Корзину</span>
+                </a>
+                <a class="fas fa-heart">
+                  <span class="sr-only">Добавить товар в избранное</span>
+                </a>
+              </div>
+            </article>
+          </li>
+
+          <li class="popular__card mix category-b">
+            <article class="card">
+              <div class="card__badge">
+                <span class="badge hidden" style="background-color: #27ae60">Новинка</span>
+                <span class="badge" style="background-color: #f18100">Хит</span>
+                <span class="badge hidden" style="background-color: #0670c7">- 50 %</span>
+              </div>
+
+              <img class="card__img" src="images/card/banana.jpg" alt="Бананы">
+              <span class="star">
+                <span class="sr-only">Рейтинг товара</span>  
+              </span>
+
+              <div class="card__content">
+                <h3 class="card__title">Бананы</h3>
+
+                <div class="small-card__status">В наличии</div>
+                <div class="small-card__status hidden" 
+                style="color: #fc6161;">Заканчивается</div>
+
+                <div class="price">
+                  <span class="old-price">60 р</span>
+                  <span class="new-price">30 р</span>
+                </div>
+              </div>
+
+              <div class="card__link-box">
+                <a class="fas fa-search">
+                  <span class="sr-only">Поиск по сайту</span>
+                </a>
+                <a class="fas fa-shopping-cart">
+                  <span class="sr-only">Добавить товар в Корзину</span>
+                </a>
+                <a class="fas fa-heart">
+                  <span class="sr-only">Добавить товар в избранное</span>
+                </a>
+              </div>
+            </article>
+          </li>
+
+          <li class="popular__card mix category-b">
+            <article class="card">
+              <div class="card__badge">
+                <span class="badge" style="background-color: #27ae60">Новинка</span>
+                <span class="badge" style="background-color: #f18100">Хит</span>
+                <span class="badge" style="background-color: #0670c7">- 50 %</span>
+              </div>
+
+              <img class="card__img" src="images/card/apple.png" alt="Яблоки">
+              <span class="star"> 
+                <span class="sr-only">Рейтинг товара</span>
+              </span>
+
+              <div class="card__content">
+                <h3 class="card__title">Яблоки</h3>
+
+                <div class="small-card__status">В наличии</div>
+                <div class="small-card__status hidden" 
+                style="color: #fc6161;">Заканчивается</div>
+
+                <div class="price">
+                  <span class="old-price">100 р</span>
+                  <span class="new-price">70 р</span>
+                </div>
+              </div>
+
+              <div class="card__link-box">
+                <a class="fas fa-search">
+                  <span class="sr-only">Поиск по сайту</span>
+                </a>
+                <a class="fas fa-shopping-cart">
+                  <span class="sr-only">Добавить товар в Корзину</span>
+                </a>
+                <a class="fas fa-heart">
+                  <span class="sr-only">Добавить товар в избранное</span>
+                </a>
+              </div>
+            </article>
+          </li>
+
+          <li class="popular__card mix category-c">
+            <article class="card">
+              <div class="card__badge">
+                <span class="badge hidden" style="background-color: #27ae60">Новинка</span>
+                <span class="badge hidden" style="background-color: #f18100">Хит</span>
+                <span class="badge " style="background-color: #0670c7">- 50 %</span>
+              </div>
+
+              <img class="card__img" src="images/card/orange-juice.jpg" alt="Брокколи">
+              <span class="star"> 
+                <span class="sr-only">Рейтинг товара</span>
+              </span>
+
+              <div class="card__content">
+                <h3 class="card__title">Апельсиновый сок</h3>
+
+                <div class="small-card__status">В наличии</div>
+                <div class="small-card__status hidden" 
+                style="color: #fc6161;">Заканчивается</div>
+
+                <div class="price">
+                  <span class="old-price hidden">100 р</span>
+                  <span class="new-price">70 р</span>
+                </div>
+              </div>
+
+              <div class="card__link-box">
+                <a class="fas fa-search">
+                  <span class="sr-only">Поиск по сайту</span>
+                </a>
+                <a class="fas fa-shopping-cart">
+                  <span class="sr-only">Добавить товар в корзину</span>
+                </a>
+                <a class="fas fa-heart">
+                  <span class="sr-only">Добавить товар в избранное</span>
+                </a>
+              </div>
+            </article>
+          </li>
+
+          <li class="popular__card mix category-c">
+            <article class="card">
+              <div class="card__badge">
+                <span class="badge" style="background-color: #27ae60">Новинка</span>
+                <span class="badge hidden" style="background-color: #f18100">Хит</span>
+                <span class="badge hidden" style="background-color: #0670c7">- 50 %</span>
+              </div>
+
+              <img class="card__img" src="images/card/apple-juice.jpg" alt="Брокколи">
+              <span class="star"> 
+                <span class="sr-only">Рейтинг товара</span>
+              </span>
+
+              <div class="card__content">
+                <h3 class="card__title">Яблочный сок</h3>
+
+                <div class="small-card__status">В наличии</div>
+                <div class="small-card__status hidden" 
+                style="color: #fc6161;">Заканчивается</div>
+
+                <div class="price">
+                  <span class="old-price hidden">100 р</span>
+                  <span class="new-price">60 р</span>
+                </div>
+              </div>
+
+              <div class="card__link-box">
+                <a class="fas fa-search">
+                  <span class="sr-only">Поиск по сайту</span>
+                </a>
+                <a class="fas fa-shopping-cart">
+                  <span class="sr-only">Добавить товар в корзину</span>
+                </a>
+                <a class="fas fa-heart">
+                  <span class="sr-only">Добавить товар в избранное</span>
+                </a>
+              </div>
+            </article>
+          </li>
+        </ul>
+
+        <button class="btn btn--center" type="button">Показать еще</button>
+      </div>
+    </section>
+
+    <div class="banners">
+      <div class="container">
+        <h3 class="sr-only">Баннеры</h3>
+        <div class="banners__inner">
+          <div class="banners__item">
+            <a class="banners__link" href="#" style="background-image: url(images/banners-img1.jpg);">
+              <div class="banners__content">
+                <p class="banners__subtitle">Натуральные фрукты</p>
+                <p class="banners__text">Наш ассортимент состоит из натуральных продуктов.</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="banners__item">
+            <a class="banners__link" href="#" style="background-image: url(images/banners-img2.jpg);">
+              <div class="banners__content">
+                <p class="banners__subtitle">Распродажа</p>
+                <p class="banners__text">Актуальные цены до конца сезона</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="banners__item">
+            <a class="banners__link" href="#" style="background-image: url(images/banners-img3.jpg);">
+              <div class="banners__content">
+                <p class="banners__subtitle">Свежие соки</p>
+                <p class="banners__text">У нас самый большой ассортимент на натуральные соки.</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="promo vertical-space" id="promo">
+      <div class="container">
+        <h2 class="title"> Акции</h2>
+        <div class="promo__inner">
+
+          <div class="promo__item">
+            <article class="small-card">
+              <img class="small-card__img" src="images/card/tomato.png" alt="">
+              <div class="small-card__box">
+                <h3 class="small-card__title">Помидоры</h3>
+                <div class="small-card__status">В наличии</div>
+                <div class="small-card__status hidden" 
+                style="color: #fc6161;">Заканчивается</div>
+                <div class="price">
+                  <span class="old-price">100 р</span>
+                  <span class="new-price">70 р</span>
+                </div>
+              </div>
+
+              <div class="small-card__link">
+                <a class="fas fa-heart">
+                  <span class="sr-only">Добавить товар в Избранное</span>
+                </a>
+                <a class="fas fa-shopping-cart">
+                  <span class="sr-only">Добавить товар в Корзину</span>
+                </a>
+                <a class="fas fa-search">
+                  <span class="sr-only">Поиск по сайту</span>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <div class="promo__item">
+            <article class="small-card">
+              <img class="small-card__img" src="images/card/broccoli.jpg" alt="">
+
+              <div class="small-card__box">
+                <h3 class="small-card__title">Брокколи</h3>
+                <div class="small-card__status">В наличии</div>
+                <div class="small-card__status hidden" 
+                style="color: #fc6161;">Заканчивается</div>
+
+                <div class="price">
+                  <span class="old-price">100 р</span>
+                  <span class="new-price">70 р</span>
+                </div>
+              </div>
+
+              <div class="small-card__link">
+                <a class="fas fa-heart">
+                  <span class="sr-only">Добавить товар в Избранное</span>
+                </a>
+                <a class="fas fa-shopping-cart">
+                  <span class="sr-only">Добавить товар в Корзину</span>
+                </a>
+                <a class="fas fa-search">
+                  <span class="sr-only">Поиск по сайту</span>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <div class="promo__item">
+            <article class="small-card">
+              <img class="small-card__img" src="images/card/banana.jpg" alt="Бананы">
+
+              <div class="small-card__box">
+                <h3 class="small-card__title">Бананы</h3>
+
+                <div class="small-card__status">В наличии</div>
+                <div class="small-card__status hidden" 
+                style="color: #fc6161;">Заканчивается</div>
+
+                <div class="price">
+                  <span class="old-price">100 р</span>
+                  <span class="new-price">70 р</span>
+                </div>
+              </div>
+
+              <div class="small-card__link">
+                <a class="fas fa-heart">
+                  <span class="sr-only">Добавить товар в Избранное</span>
+                </a>
+                <a class="fas fa-shopping-cart">
+                  <span class="sr-only">Добавить товар в Корзину</span>
+                </a>
+                <a class="fas fa-search">
+                  <span class="sr-only">Поиск по сайту</span>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <div class="promo__item">
+            <article class="small-card">
+              <img class="small-card__img" src="images/card/pear.png" alt="Груша">
+
+              <div class="small-card__box">
+                <h3 class="small-card__title">Груша</h3>
+                <div class="small-card__status">В наличии</div>
+
+                <div class="price">
+                  <span class="old-price">100 р</span>
+                  <span class="new-price">70 р</span>
+                </div>
+              </div>
+
+              <div class="small-card__link">
+                <a class="fas fa-heart">
+                  <span class="sr-only">Добавить товар в Избранное</span>
+                </a>
+                <a class="fas fa-shopping-cart">
+                  <span class="sr-only">Добавить товар в Корзину</span>
+                </a>
+                <a class="fas fa-search">
+                  <span class="sr-only">Поиск по сайту</span>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <div class="promo__item">
+            <article class="small-card">
+              <img class="small-card__img" src="images/card/apple.png" alt="Яблоки">
+
+              <div class="small-card__box">
+                <h3 class="small-card__title">Яблоки</h3>
+                
+                <div class="small-card__status hidden">В наличии</div>
+                <div class="small-card__status " 
+                style="color: #fc6161;">Заканчивается</div>
+
+                <div class="price">
+                  <span class="old-price">100 р</span>
+                  <span class="new-price">70 р</span>
+                </div>
+              </div>
+
+              <div class="small-card__link">
+                <a class="fas fa-heart">
+                  <span class="sr-only">Добавить товар в Избранное</span>
+                </a>
+                <a class="fas fa-shopping-cart">
+                  <span class="sr-only">Добавить товар в Корзину</span>
+                </a>
+                <a class="fas fa-search">
+                  <span class="sr-only">Поиск по сайту</span>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <div class="promo__item">
+            <article class="small-card">
+              <img class="small-card__img" src="images/card/cauliflower.png" alt="Цветная капуста">
+
+              <div class="small-card__box">
+                <h3 class="small-card__title">Цветная капуста</h3>
+                
+                <div class="small-card__status">В наличии</div>
+                <div class="small-card__status hidden" 
+                style="color: #fc6161;">Заканчивается</div>
+
+                <div class="price">
+                  <span class="old-price">100 р</span>
+                  <span class="new-price">70 р</span>
+                </div>
+              </div>
+
+              <div class="small-card__link">
+                <a class="fas fa-heart">
+                  <span class="sr-only">Добавить товар в Избранное</span>
+                </a>
+                <a class="fas fa-shopping-cart">
+                  <span class="sr-only">Добавить товар в Корзину</span>
+                </a>
+                <a class="fas fa-search">
+                  <span class="sr-only">Поиск по сайту</span>
+                </a>
+              </div>
+            </article>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <div class="video">
+      <div class="container">
+        <div class="video__inner">
+          <a class="video__popup" href="https://www.youtube.com/watch?v=_sI_Ps7JSEk">
+            <span class="video__play"></span>
+            <span class="sr-only">Открыть видео</span>
+          </a>
+
+          <div class="video__content">
+            <p class="video__subtitle">Информация</p>
+            <h3 class="title video__title">Органические продукты</h3>
+            <p class="video__text">
+              Что такое органические продукты? Это качественная и здоровая пища, взращенная и
+              произведенная классическим способом, по безопасным технологиям, которые не причиняют ущерба окружающей
+              среде и здоровью людей. Органика призывает сберегать и поддерживать натуральное состояние почвы, чистоту
+              воздуха и воды, богатство животного и растительного мира. Ответственный, внимательный подход к природе.
+            <p> «Organic food» – не изобретение современности. Все составляющие продукта созревают естественным путем,
+              благодаря солнцу, воде и уходу в экологично безупречных условиях.
+            </p>
+            </з>
+            <a class="video__link"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="news vertical-space" id="news">
+      <div class="container">
+        <h2 class="title">Новости</h2>
+        <div class="news__inner">
+
+          <div class="news__item">
+            <a class="news__link" href="#">
+              <img class="news__img" src="images/news-1.jpg" alt="Овощи и фрукты">
+              <div class="news__content">
+                <time class="time" datetime="21.06.2021">
+                 21 июня 2021 года.
+                </time>
+                <h3 class="news__subtitle">Продажи органических продуктов</h3>
+                <p class="news__text">Органические продукты продаются быстрее, из за лучшего качества продукта.</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="news__item">
+            <a class="news__link" href="#">
+              <img class="news__img" src="images/news-2.jpg" alt="Корзина с яблоками">
+
+              <div class="news__content">
+
+                <time class="time" datetime="25.06.2021">
+                  25 июня 2021 года.
+                 </time>
+
+                <h3 class="news__subtitle">Качество органических продуктов.</h3>
+                <p class="news__text">Эксперты сходятся во мнении, что качество органических продуктов выше, чем у обычных, из за натурального происхождения.</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="news__item">
+            <a class="news__link" href="#">
+              <img class="news__img" src="images/news-3.jpg" alt="Супермаркет">
+
+              <div class="news__content">
+                <time class="time" datetime="30.06.2021">
+                  30 июня 2021 года.
+                 </time>
+                <h3 class="news__subtitle">Открылся новый магазин</h3>
+                <p class="news__text"> "Organic food" - открыл новый магазин. В ассортменте представлены органические продукты.
+                  !</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="subscribe">
+          <div class="container">
+            <h3 class="title">Подписаться на новости</h3>
+            <form class="subscribe__form">
+              <span class="sr-only">Форма подписки на новости</span>
+              <input class="subscribe__field" type="text" placeholder="Введите ваше имя..." aria-label="Введите Имя">
+
+              <input class="subscribe__field" type="email" name="email" placeholder="Введите вашу почту..." required
+                aria-label="Введите почту">
+
+              <button class="btn subscribe__btn">Подписаться</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer__inner vertical-space">
+
+        <div class="footer__item">
+          <a class="logo footer__logo" href="#">
+            <img class="logo__img" srcset="images/logo.png" alt="Логотип сайта">
+          </a>
+
+          <div class="footer__contact">
+            <div class="footer__contact-item">
+              <svg class="footer__icon">
+                <use xlink:href="images/sprite.svg#point"></use>
+              </svg>
+              <span class="footer__text">Наш адрес : </span> г. Москва, ул Тверская д. 60
+            </div>
+
+            <div class="footer__contact-item">
+
+              <svg class="footer__icon">
+                <use xlink:href="images/sprite.svg#phone"></use>
+              </svg>
+
+              <span class="footer__text">Наш телефон : </span>
+              <a class="footer__link" 
+              href="tel:+7880000000"> + 7 880 00000</a>
+
+            </div>
+
+            <div class="footer__contact-item">
+              <svg class="footer__icon">
+                <use xlink:href="images/sprite.svg#mail"></use>
+              </svg>
+              <span class="footer__text">Наша Почта : </span>
+              <a class="footer__link" 
+              href="mailto:info@organic-pro.ru"> info@organic-pro.ru</a>
+            </div>
+          </div>
+          
+        </div>
+
+        <div class="footer__item">
+         
+          <h3 class="footer__subtitle">Социальные сети</h3>
+          <span>Подписывайте на наши социальные сети.</span>
+
+          <div class="social">
+            <a class="social__link" href="#" >
+              <span class="fab fa-youtube"></span>
+              <span class="sr-only">youtube</span>
+            </a>
+
+            <a class="social__link" href="#" >
+              <span class="fab fa-facebook-f"></span>
+              <span class="sr-only">facebook</span>
+            </a>
+
+            <a class="social__link" href="#" >
+              <span class="fab fa-vk"></span>
+              <span class="sr-only">Вконтакте</span>
+            </a>
+
+            <a class="social__link" href="#" >
+              <span class="fab fa-instagram"></span>
+              <span class="sr-only">Instagram</span>
+            </a>
+
+            <a class="social__link" href="#" >
+              <span class="fab fa-twitter"></span>
+              <span class="sr-only">twitter</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer__item">
+          <h3 class="footer__subtitle">Интернет-магазина</h3>
+
+          <ul class="footer__menu">
+            <li class="footer__menu-item">
+              <a class="footer__link" href="#">Каталог</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__link" href="#">Новинки</a>
+            </li>
+           
+            <li class="footer__menu-item">
+              <a class="footer__link" href="#">Способы доставки</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__link" href="#">Бонусная программа</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Акции</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__item">
+          <h3 class="footer__subtitle">Медиа ресурсы</h3>
+
+          <ul class="footer__list">
+            <li  class="footer__list-item">
+              Автор иконок: <a href="https://www.freepik.com" title="Freepik">Freepik</a>
+            </li>
+            <li  class="footer__list-item">
+              Автор иконок:<a
+                href="https://www.flaticon.com/ru/" title="Flaticon">www.flaticon.com</a>
+            </li>
+
+
+          
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>
